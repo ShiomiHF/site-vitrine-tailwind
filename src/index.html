@@ -7,16 +7,31 @@
     <title>Site vitrine avec Tailwind</title>
   </head>
   <body>
-    <header class="flex justify-between">
-      <div class="header-logo">
-        <img class="inline h-10" src="./img/logo.png" alt="" />
-      </div>
-      <div class="header-nav">
-        <ul>
-          <li>Distinasion</li>
-          <li>Nos tarifs</li>
-          <li>Contact</li>
-        </ul>
+    <header
+      class="max-w-full [background-image:linear-gradient(152deg,#fcfcfc_0%,#fcfcfc_50%,#ef4444_50%,#ef4444_100%)] md:[background-image:linear-gradient(135deg,#fcfcfc_0%,#fcfcfc_50%,#ef4444_50%,#ef4444_100%)] [height:50vh] md:h-auto"
+    >
+      <div class="w-11/12 mx-auto h-full md:h-auto">
+        <nav
+          class="w-full h-full md:h-auto py-10 md:p-4 flex justify-between flex-col md:flex-row"
+        >
+          <div class="self-center">
+            <a href="">
+              <img class="inline h-24" src="./img/logo.png" alt="logo" />
+              <p class="inline pl-2 pt-2 text-4xl">JP Trip</p>
+            </a>
+          </div>
+          <div class="self-end">
+            <ul>
+              <li class="text-white pt-3 text-2xl">
+                <a href="">Destination</a>
+              </li>
+              <li class="text-white py-3 text-2xl">
+                <a href="">Nos tarifs</a>
+              </li>
+              <li class="text-white py-3 text-2xl"><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
   </body>
