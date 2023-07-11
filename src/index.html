@@ -3,36 +3,281 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Moul&family=Poppins:wght@200;300;400;600;900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Site vitrine avec Tailwind</title>
   </head>
-  <body>
+  <body
+    class="bg-contain bg-repeat bg-opacity-25"
+    style="background-image: url('./img/pattern.jpg'); height: 400px"
+  >
     <header
-      class="max-w-full [background-image:linear-gradient(152deg,#fcfcfc_0%,#fcfcfc_50%,#ef4444_50%,#ef4444_100%)] md:[background-image:linear-gradient(135deg,#fcfcfc_0%,#fcfcfc_50%,#ef4444_50%,#ef4444_100%)] [height:50vh] md:h-auto"
+      class="max-w-full [background-image:linear-gradient(152deg,#fcfcfc_0%,#fcfcfc_50%,#ef4444_50%,#ef4444_100%)] md:[background-image:linear-gradient(135deg,#fcfcfc_0%,#fcfcfc_50%,#ef4444_50%,#ef4444_100%)] drop-shadow-lg [height:56vh] md:h-auto"
     >
-      <div class="w-11/12 mx-auto h-full md:h-auto">
+      <div class="w-10/12 mx-auto h-full md:h-auto">
         <nav
           class="w-full h-full md:h-auto py-10 md:p-4 flex justify-between flex-col md:flex-row"
         >
-          <div class="self-center">
+          <div class="">
             <a href="">
-              <img class="inline h-24" src="./img/logo.png" alt="logo" />
-              <p class="inline pl-2 pt-2 text-4xl">JP Trip</p>
+              <img
+                class="inline h-24"
+                src="./img/fuji-mountain.png"
+                alt="logo"
+              />
             </a>
           </div>
           <div class="self-end">
             <ul>
-              <li class="text-white pt-3 text-2xl">
+              <li class="text-white text-2xl">
                 <a href="">Destination</a>
               </li>
-              <li class="text-white py-3 text-2xl">
+              <li class="text-white text-2xl pt-6 md:pt-2">
                 <a href="">Nos tarifs</a>
               </li>
-              <li class="text-white py-3 text-2xl"><a href="">Contact</a></li>
+              <li class="text-white text-2xl pt-6 md:pt-2">
+                <a href="">Contact</a>
+              </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+    <main class="py-16">
+      <h1 class="text-center font-mono text-white text-2xl mb-10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h1>
+      <section>
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/osaka.jpg" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="w-10/12 mx-auto my-16">
+        <h2 class="text-2xl text-sky-900 mb-6">Destinations</h2>
+        <div
+          class="flex flex-col justify-center items-center gap-4 lg:flex-row lg:flex-nowrap mx-auto"
+        >
+          <div class="bg-white rounded overflow-hidden flex-1">
+            <article>
+              <img
+                class="w-full object-cover"
+                src="./img/tokyo.jpg"
+                alt="tokyo"
+              />
+              <div class="w-4/5 mx-auto my-4 text-center">
+                <h3 class="text-lg text-red-700 pb-2">Tokyo</h3>
+                <div class="w-full bg-red-900 h-px"></div>
+                <p class="text-sm pt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt eveniet illum, autem, corporis ad architecto possimus
+                  dicta adipisci esse iure ducimus magnam dolor amet vitae,
+                  error consequatur incidunt recusandae maiores.
+                </p>
+                <button
+                  class="bg-transparent hover:bg-red-500 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mt-4"
+                >
+                  Button
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="bg-white rounded overflow-hidden flex-1">
+            <article>
+              <img
+                class="w-full object-cover"
+                src="./img/osaka.jpg"
+                alt="osaka"
+              />
+              <div class="w-4/5 mx-auto my-4 text-center">
+                <h3 class="text-lg text-red-700 pb-2">Osaka</h3>
+                <div class="w-full bg-red-900 h-px"></div>
+                <p class="text-sm pt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt eveniet illum, autem, corporis ad architecto possimus
+                  dicta adipisci esse iure ducimus magnam dolor amet vitae,
+                  error consequatur incidunt recusandae maiores.
+                </p>
+                <button
+                  class="bg-transparent hover:bg-red-500 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mt-4"
+                >
+                  Button
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="bg-white rounded overflow-hidden flex-1">
+            <article>
+              <img
+                class="w-full object-cover"
+                src="./img/yokohama.jpg"
+                alt="yokohama"
+              />
+              <div class="w-4/5 mx-auto my-4 text-center">
+                <h3 class="text-lg text-red-700 pb-2">Yokohama</h3>
+                <div class="w-full bg-red-900 h-px"></div>
+                <p class="text-sm pt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt eveniet illum, autem, corporis ad architecto possimus
+                  dicta adipisci esse iure ducimus magnam dolor amet vitae,
+                  error consequatur incidunt recusandae maiores.
+                </p>
+                <button
+                  class="bg-transparent hover:bg-red-500 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mt-4"
+                >
+                  Button
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="bg-white rounded overflow-hidden flex-1">
+            <article>
+              <img
+                class="w-full object-cover"
+                src="./img/kyoto.jpg"
+                alt="kyoto"
+              />
+              <div class="w-4/5 mx-auto my-4 text-center">
+                <h3 class="text-lg text-red-700 pb-2">Kyoto</h3>
+                <div class="w-full bg-red-900 h-px"></div>
+                <p class="text-sm pt-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Deserunt eveniet illum, autem, corporis ad architecto possimus
+                  dicta adipisci esse iure ducimus magnam dolor amet vitae,
+                  error consequatur incidunt recusandae maiores.
+                </p>
+                <button
+                  class="bg-transparent hover:bg-red-500 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mt-4"
+                >
+                  Butred
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="w-10/12 mx-auto">
+        <h2 class="text-2xl text-sky-900 mb-6">Petit information</h2>
+        <article class="flex flex-col md:flex-row justify-between p-2">
+          <div class="flex-1 p-2">
+            <p class="mb-6 text-center md:text-left">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              deserunt officia reiciendis blanditiis provident expedita porro
+              illo aspernatur laborum excepturi architecto assumenda quia quasi
+              voluptatum iusto, ex corrupti tenetur iure.
+            </p>
+            <div
+              class="flex flex-row justify-center md:justify-normal gap-6 mb-4"
+            >
+              <a href=""
+                ><img src="./img/instagram.png" alt="instagram" class="w-12"
+              /></a>
+              <a href=""
+                ><img src="./img/twitter.png" alt="twitter" class="w-12"
+              /></a>
+              <a href=""
+                ><img src="./img/linkedin.png" alt="linkedin" class="w-12"
+              /></a>
+              <!-- rs -->
+            </div>
+          </div>
+          <div class="flex-1 p-2">
+            <video width="100%" height="auto" controls>
+              <source src="./img/sushi_-_11714 (540p).mp4" type="video/mp4" />
+            </video>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="w-10/12 mx-auto my-16 text-center">
+      <section class="py-4">
+        <h3 class="mb-6">LOREM IPSUM</h3>
+        <p class="text-sm leading-loose mb-6">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+          asperiores molestias quas ab in quae et, porro deleniti inventore
+          aspernatur optio nostrum, iste animi officiis dolorem, soluta impedit
+          totam cupiditate, porro deleniti inventore aspernatur optio nostrum,
+          iste animi officiis dolorem, soluta impedit totam cupiditate. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Expedita asperiores
+          molestias quas ab in quae et, porro deleniti inventore aspernatur
+          optio nostrum, iste animi officiis dolorem.
+        </p>
+        <ul class="flex flex-row justify-center gap-3">
+          <li class="text-sm"><a href="">Home</a></li>
+          <li class="text-sm"><a href=""></a>About</li>
+          <li class="text-sm"><a href="">Q&A</a></li>
+          <li class="text-sm"><a href="">Contact</a></li>
+        </ul>
+      </section>
+      <section class="my-4">
+        <div>
+          <img
+            src="./img/maneki-neko.png"
+            alt="neko"
+            class="w-12 mx-auto mb-6"
+          />
+        </div>
+        <p class="text-sm">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+          distinctio pariatur at obcaecati nisi recusandae consequuntur
+          doloribus error fuga unde? Non harum sunt tenetur fugiat molestias
+          reprehenderit labore itaque nostrum.
+        </p>
+      </section>
+    </footer>
+    <!-- <script>
+      const myCarousel = new Carousel(
+        document.getElementById("myCarousel"),
+        options
+      );
+    </script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
