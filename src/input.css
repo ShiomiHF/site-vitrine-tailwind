@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  h2,h3 {
-    font-family: 'Moul', cursive;
+  h1,
+  h2,
+  h3 {
+    font-family: "Moul", cursive;
+  }
+  p,a {
+    font-family: "Raleway", sans-serif;
   }
 }
